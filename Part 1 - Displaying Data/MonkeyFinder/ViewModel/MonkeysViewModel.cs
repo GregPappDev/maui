@@ -19,9 +19,14 @@ public partial class MonkeysViewModel : BaseViewModel
         this.geolocation = geolocation;
     }
 
+    [ObservableProperty]
+    bool isRefreshing;
+
     [RelayCommand]
     async Task GetClosestMonkeyAsync()
     {
+        
+
         if(IsBusy || Monkeys.Count == 0) return;
 
         try
@@ -95,7 +100,8 @@ public partial class MonkeysViewModel : BaseViewModel
         }
         finally 
         {
-                IsBusy = false;
+            IsBusy = false;
+            isRefreshing = false;
         }
     }
 }
