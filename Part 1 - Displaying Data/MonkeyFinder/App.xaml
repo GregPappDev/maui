@@ -31,8 +31,7 @@
 
             <Style TargetType="Label" x:Key="BaseLabel">
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
-                <Setter Property="TextColor" 
-                        Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
             </Style>
 
             <Style x:Key="MicroLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
@@ -57,7 +56,7 @@
             
             <Style x:Key="ButtonOutline" TargetType="Button">
                 <Setter Property="Background" 
-                        Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}"/>
+                        Value="{AppThemeBinding Light={StaticResource LabelTextDark}, Dark={StaticResource LabelText}}"/>
                 <Setter Property="TextColor" Value="{StaticResource Primary}"/>
                 <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
                 <Setter Property="BorderWidth" Value="2"/>
@@ -68,8 +67,7 @@
                 <Setter Property="BorderColor" Value="#DDDDDD"/>
                 <Setter Property="HasShadow" Value="{OnPlatform iOS=false, MacCatalyst=false, Default=true}"/>
                 <Setter Property="Padding" Value="0"/>
-                <Setter Property="Background" 
-                        Value="{AppThemeBinding Light={StaticResource CardBackground}, Dark={StaticResource CardBackgroundDark}}"/>
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource CardBackground}, Dark={StaticResource CardBackgroundDark}}"/>
                 <Setter Property="CornerRadius" Value="10"/>
                 <Setter Property="IsClippedToBounds" Value="True"/>
             </Style>
